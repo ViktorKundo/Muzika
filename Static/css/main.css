@@ -1,0 +1,82 @@
+/* VARIABLES */
+/* BS ELEMENTS */
+.dropdown-menu {
+  background-color: #351863 !important;
+  border-color: #351863 !important;
+}
+
+.dropdown-item {
+  transition: 0.2s;
+}
+.dropdown-item:visited {
+  background-color: #351863;
+}
+.dropdown-item:hover {
+  background-color: #3e196f;
+}
+.dropdown-item:active {
+  background-color: #5a1671;
+  font-weight: bold;
+}
+
+.nav-link {
+  transition: 0.2s;
+}
+.nav-link:visited {
+  background-color: #351863;
+}
+.nav-link:hover {
+  background-color: #3e196f;
+}
+.nav-link:active {
+  background-color: #5a1671;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  background-color: #351863 !important;
+}
+
+/* ELEMENTS */
+* {
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li {
+  color: hsl(0deg, 0%, 95%) !important;
+}
+
+.li-content {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.p-questions {
+  margin-bottom: 2rem;
+}
+
+/* CLASSES AND IDS */
+.background-trb {
+  
+  background-image: linear-gradient(to right bottom, #1e133f, #25154b, #2c1757, #351863, #3e196f, #5a1671, #731072, #8a0870, #a81661, #bc3152, #c84f45, #cc6c3c);
+}
+
+.background-trt {
+  
+  background-image: linear-gradient(to right top, #1e133f, #25154b, #2c1757, #351863, #3e196f, #5a1671, #731072, #8a0870, #a81661, #bc3152, #c84f45, #cc6c3c);
+}
+
+.container-styles {
+  background-color: hsla(0deg, 0%, 0%, 0.1);
+  
+}
+
+header {
+  background-color: #1e133f;
+}
+
+.img-temp {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0deg, 0%, 5%);
+}/*# sourceMappingURL=main.css.map */
