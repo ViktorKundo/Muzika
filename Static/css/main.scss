@@ -1,0 +1,120 @@
+/* VARIABLES */
+
+$color-black: hsla(0, 0%, 5%, 1);
+$color-white: hsla(0, 0%, 95%, 1);
+
+$color-dark-1: #1e133f;
+$color-dark-2: #25154b;
+$color-dark-3: #2c1757;
+$color-dark-4: #351863;
+$color-dark-5: #3e196f;
+$color-dark-6: #5a1671;
+$color-light-1: #731072;
+$color-light-2: #8a0870;
+$color-light-3: #a81661;
+$color-light-4: #bc3152;
+$color-light-5: #c84f45;
+$color-light-6: #cc6c3c;
+
+
+/* BS ELEMENTS */
+
+.dropdown-menu {
+    background-color: $color-dark-4 !important;
+    border-color: $color-dark-4 !important;
+}
+
+.dropdown-item, .nav-link {
+    transition: 0.2s;
+    &:visited {background-color: $color-dark-4;}
+    &:hover {background-color: $color-dark-5;}
+    &:active {background-color: $color-dark-6; font-weight: bold;}
+}
+
+.nav-link.active {
+    background-color: $color-dark-4 !important;
+}
+
+
+/* ELEMENTS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li {
+    color: $color-white !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* CLASSES AND IDS */
+
+.background-trb {
+    background-image: linear-gradient(to right bottom, #1e133f, #25154b, #2c1757, #351863, #3e196f, #5a1671, #731072, #8a0870, #a81661, #bc3152, #c84f45, #cc6c3c);
+}
+
+.background-trt {
+    background-image: linear-gradient(to right top, #1e133f, #25154b, #2c1757, #351863, #3e196f, #5a1671, #731072, #8a0870, #a81661, #bc3152, #c84f45, #cc6c3c);
+}
+
+.container-styles {
+    background-color: hsla(0, 0%, 0%, 0.1);
+    height: 50vh;
+}
+
+header, footer {
+    background-color: $color-dark-1;
+}
+
+.img-temp {
+    width: 100%;
+    background-color: $color-black;
+}
+
+.li-content {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.faq {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $color-white;
+    cursor: pointer;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.faq.active .answer {
+    max-height: 5rem;
+    animation: fade 0.5s ease-in-out;
+}
+
+svg {
+    transition: transform 0.5s ease-in;
+}
+
+.faq.active svg {
+    transform: rotate(180deg);
+}
+
+
+/* ANIMATIONS */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

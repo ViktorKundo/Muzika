@@ -5,30 +5,16 @@
   border-color: #351863 !important;
 }
 
-.dropdown-item {
+.dropdown-item, .nav-link {
   transition: 0.2s;
 }
-.dropdown-item:visited {
+.dropdown-item:visited, .nav-link:visited {
   background-color: #351863;
 }
-.dropdown-item:hover {
+.dropdown-item:hover, .nav-link:hover {
   background-color: #3e196f;
 }
-.dropdown-item:active {
-  background-color: #5a1671;
-  font-weight: bold;
-}
-
-.nav-link {
-  transition: 0.2s;
-}
-.nav-link:visited {
-  background-color: #351863;
-}
-.nav-link:hover {
-  background-color: #3e196f;
-}
-.nav-link:active {
+.dropdown-item:active, .nav-link:active {
   background-color: #5a1671;
   font-weight: bold;
 }
@@ -39,11 +25,37 @@
 
 /* ELEMENTS */
 * {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, li {
   color: hsl(0deg, 0%, 95%) !important;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* CLASSES AND IDS */
+.background-trb {
+  background-image: linear-gradient(to right bottom, #1e133f, #25154b, #2c1757, #351863, #3e196f, #5a1671, #731072, #8a0870, #a81661, #bc3152, #c84f45, #cc6c3c);
+}
+
+.background-trt {
+  background-image: linear-gradient(to right top, #1e133f, #25154b, #2c1757, #351863, #3e196f, #5a1671, #731072, #8a0870, #a81661, #bc3152, #c84f45, #cc6c3c);
+}
+
+.container-styles {
+  background-color: hsla(0deg, 0%, 0%, 0.1);
+  height: 50vh;
+}
+
+header, footer {
+  background-color: #1e133f;
+}
+
+.img-temp {
+  width: 100%;
+  background-color: hsl(0deg, 0%, 5%);
 }
 
 .li-content {
@@ -51,32 +63,51 @@ h1, h2, h3, h4, h5, h6, p, a, li {
   font-size: 1.5rem;
 }
 
-.p-questions {
-  margin-bottom: 2rem;
+.faq {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid hsl(0deg, 0%, 95%);
+  cursor: pointer;
 }
 
-/* CLASSES AND IDS */
-.background-trb {
-  
-  background-image: linear-gradient(to right bottom, #1e133f, #25154b, #2c1757, #351863, #3e196f, #5a1671, #731072, #8a0870, #a81661, #bc3152, #c84f45, #cc6c3c);
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 
-.background-trt {
-  
-  background-image: linear-gradient(to right top, #1e133f, #25154b, #2c1757, #351863, #3e196f, #5a1671, #731072, #8a0870, #a81661, #bc3152, #c84f45, #cc6c3c);
+.faq.active .answer {
+  max-height: 5rem;
+  -webkit-animation: fade 0.5s ease-in-out;
+          animation: fade 0.5s ease-in-out;
 }
 
-.container-styles {
-  background-color: hsla(0deg, 0%, 0%, 0.1);
-  
+svg {
+  transition: transform 0.5s ease-in;
 }
 
-header {
-  background-color: #1e133f;
+.faq.active svg {
+  transform: rotate(180deg);
 }
 
-.img-temp {
-  width: 100%;
-  height: 100%;
-  background-color: hsl(0deg, 0%, 5%);
+/* ANIMATIONS */
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }/*# sourceMappingURL=main.css.map */
