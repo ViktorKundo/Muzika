@@ -31,17 +31,11 @@
                         <li class="nav-item"><a href="#" class="nav-link">Concerts</a></li>
                         <li class="nav-item me-4"><a href="#" class="nav-link">About Us</a></li>
                         <div class="d-flex flex-wrap align-items-center justify-content-center">
-                            <div class="dropdown text-end me-4">
-                                <li class="nav-item d-block text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Login</li>
-                                <ul class="dropdown-menu text-small">
-                                    <li><a class="dropdown-item" href="#">Listener</a></li>
-                                    <li><a class="dropdown-item" href="#">Artist/Band</a></li>
-                                </ul>
-                            </div>
+                            <li class="nav-item me-4" id="login">Login</li>
                             <div class="dropdown text-end">
                                 <li class="nav-item d-block text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Register</li>
                                 <ul class="dropdown-menu text-small">
-                                    <li><a class="dropdown-item" href="#">Listener</a></li>
+                                    <li><a class="dropdown-item" href="#">User</a></li>
                                     <li><a class="dropdown-item" href="#">Artist/Band</a></li>
                                 </ul>
                             </div>
@@ -50,6 +44,18 @@
                 </div>
             </div>
         </header>
+
+        <div class="popup">
+            <div class="popup-content">
+                <img src="images/close.png" class="close">
+                <h2 class="fw-bold mb-4">Login</h2>
+                <label for="usernameOrEmail">Username or Email</label>
+                <input type="text" id="usernameOrEmail" placeholder="Username or Email">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+                <input type="submit" value="Submit">
+            </div>
+        </div>
 
         <main class="background-trb">
             <div class="container container-styles d-flex align-items-center justify-content-center">
