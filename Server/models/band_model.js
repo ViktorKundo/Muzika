@@ -17,7 +17,7 @@ const songsSchema = new mongoose.Schema({
 });
 
 const bandSchema = new mongoose.Schema({
-    bandUserName: reqString,
+    bandUserName: reqStrin,
     bandName: String,
     password: reqString,
     email: reqString,
