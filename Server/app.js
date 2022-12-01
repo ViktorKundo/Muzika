@@ -1,27 +1,27 @@
 require("dotenv").config();
 const express = require("express");
 const connectDB = require("./db/connection");
-const bandSchema = require("./models/band_model")
 const app = express();
+const path = require('path')
+
+const bandRouter = require("./routes/band_route");
+
+PORT = 5000;
+
+
+app.use(express.static("../Static"));
+        
+app.use("/api/bands", bandRouter);
 
 app.use(express.json());
 
-PORT = 5000;
+app.use(express.urlencoded({ extended: false}));
 
 const start = async () => {
     try {
         await connectDB(process.env.MONGO_URI);
         console.log("Successfully connected to database!");
-        await new bandSchema({
-            bandUserName: "zvezdice123",
-            bandName: "Starset",
-            password: "prejaki",
-            email: "starset@gmail.com",
-            bandParticipants: [
-                {firstName: "Luka", lastName: "Bogdanovic", Role: "Pevac"},
-                {firstname: "Sveti", lastName: "Mici", Role: "Vanga"},
-                ]
-        }).save()
+        
         app.listen(PORT, () => {
             console.log(`Server is listening on port ${PORT}.....`);
         })
