@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Music - Home</title>
+        <title>MusicTicket - Home</title>
 
         <!-- BOOTSTRAP -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -23,20 +23,20 @@
                 <div class="d-flex flex-wrap align-items-center justify-content-center py-2">
                     <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
                         <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-                        <span class="fs-4">Music</span>
+                        <span class="fs-4">MusicTicket</span>
                     </a>
                 
                     <ul class="nav nav-pills">
-                        <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Concerts</a></li>
-                        <li class="nav-item me-4"><a href="about-us.html" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="./index.html" class="nav-link" aria-current="page">Home</a></li>
+                        <li class="nav-item"><a href="./concerts" class="nav-link">Concerts</a></li>
+                        <li class="nav-item me-4"><a href="./about-us.html" class="nav-link">About Us</a></li>
                         <div class="d-flex flex-wrap align-items-center justify-content-center">
                             <li class="nav-item me-4" id="login">Login</li>
                             <div class="dropdown text-end">
                                 <li class="nav-item d-block text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Register</li>
                                 <ul class="dropdown-menu text-small">
-                                    <li><a class="dropdown-item" href="#">User</a></li>
-                                    <li><a class="dropdown-item" href="#">Artist/Band</a></li>
+                                    <li><a class="dropdown-item" href="./register-user.html">User</a></li>
+                                    <li><a class="dropdown-item" href="./register-artist.html">Artist</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -48,14 +48,15 @@
         <div class="popup">
             <div class="popup-content">
                 <img src="images/close.png" class="close">
-                <form action="/login" method="post">
-                    <h2 class="fw-bold mb-4">Login</h2>
-                    <label for="usernameOrEmail">Username or Email</label>
-                    <input type="text" name="bandUserName" id="usernameOrEmail" placeholder="Username or Email">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password">
-                    <input type="submit" value="Submit">
-                </form>
+                <h2 class="fw-bold mb-4">Login</h2>
+                <label for="usernameOrEmail">Username or Email</label>
+                <input type="text" id="usernameOrEmail" placeholder="Username or Email">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+                <label for="forgotPassword">Forgot Password?
+                    <input type="checkbox" id="forgotPassword">
+                </label>
+                <input type="submit" value="Submit">
             </div>
         </div>
 
@@ -67,7 +68,7 @@
                             <div class="img-temp"></div>
                         </div>
                         <div class="col-12 d-flex flex-wrap align-items-center justify-content-center py-5 header">
-                            <h1>Browse concerts as a listener, reserve concerts as an artist.</h1>
+                            <h1 class="fw-bold">Browse concerts as a listener, reserve concerts as an artist.</h1>
                         </div>
                     </section>
                 </div>
@@ -77,7 +78,7 @@
                 <div class="d-flex align-items-center justify-content-center">
                     <section class="col-12 d-flex flex-wrap align-items-center justify-content-center header">
                         <div class="col-12 d-flex flex-wrap align-items-center justify-content-center py-5 header">
-                            <h2 class="fw-bold">Why [Music]?</h2>
+                            <h2 class="fw-bold">Why MusicTicket?</h2>
                         </div>
                         <div class="col-12 d-flex flex-wrap align-items-start justify-content-center py-5 header">
                             <div class="col d-flex flex-wrap align-items-center justify-content-center py-5 mx-3 header">
@@ -128,19 +129,19 @@
                         <div class="col-12 d-flex flex-wrap align-items-center justify-content-center py-5 header">
                             <ul>
                                 <li class="li-content">
-                                    <span class="fw-bold">Home:</span> 
+                                    <span class="fw-bold">Home:</span> basic info about website and answering some FAQs.
                                 </li>
                                 <li class="li-content">
-                                    <span class="fw-bold">Concerts:</span>
+                                    <span class="fw-bold">Concerts:</span> browse list of active and planned concerts - you can reserve concerts as a registered artist.
                                 </li>
                                 <li class="li-content">
-                                    <span class="fw-bold">About Us:</span>
+                                    <span class="fw-bold">About Us:</span> brief introduction to the team behind the project.
                                 </li>
                                 <li class="li-content">
-                                    <span class="fw-bold">Login:</span>
+                                    <span class="fw-bold">Login:</span> login to website, to unlock access to list of concerts.
                                 </li>
                                 <li class="li-content">
-                                    <span class="fw-bold">Register:</span>
+                                    <span class="fw-bold">Register:</span> register to website, either as a user or an artist.
                                 </li>
                             </ul>
                         </div>
@@ -222,7 +223,7 @@
                 <div class="d-flex flex-wrap align-items-center justify-content-center py-2">
                     <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
                         <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-                        <span class="fs-4">Music</span>
+                        <span class="fs-4">Muzika</span>
                     </a>
                 
                     <ul class="nav nav-pills">
